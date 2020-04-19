@@ -1,0 +1,26 @@
+##Zadanie 1
+import random
+liczby=[random.randint(0,100) for p in range (0,100)]
+podzielne=[p for p in liczby if p%4==0]
+print("Liczby podzielne przez 4: ")
+print(podzielne)
+plik=open("podzielne.txt","a+")
+plik.writelines(str(podzielne))
+plik.close()
+
+
+##Zadanie 2
+with open("podzielne.txt","r") as pliki:
+    for linia in pliki:
+        print(linia, end="")
+        
+        
+##Zadanie 3
+import sys
+with open("dane.txt","w") as plik:
+    test="jkwqjwdjkwkjdlwkqjw"
+    for napis in test:
+        plik.write(str(napis)+"\n")
+with open("dane.txt","r") as plik:
+    for linia in plik:
+        print(linia,end="")
